@@ -26,6 +26,7 @@ class AlienInvasion:
         # Start the main loop for the game.
         while True:
             self._check_events()
+            self.ship.update()
             self._update_screen()
 
     def _check_events(self):    
@@ -40,7 +41,7 @@ class AlienInvasion:
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_RIGHT:
                     self.ship.moving_right = False
-                    
+
 
     
     def _update_screen(self):
